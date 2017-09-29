@@ -2,12 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.5.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
+	
 	<groupId>zf-demo</groupId>
 	<artifactId>cloud-config-learning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -30,6 +25,13 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.5.RELEASE</version>
+		<relativePath /> 
+	</parent> 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -40,7 +42,25 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
+	</dependencyManagement> 
+	<!--
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+	</parent>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
+	-->
 	<build>
 		<plugins>
 			<plugin>
@@ -62,6 +82,9 @@
 		<module>cloud-config-service-authc</module>
 		<module>cloud-config-client-authc</module>
 		<module>cloud-config-client-eureka</module>
+		<module>cloud-config-client-refresh</module>
 		<module>cloud-config-service-eureka</module>
+		<module>cloud-eureka-service</module>
+		<module>cloud-eureka-service-height</module>
 	</modules>
 </project>

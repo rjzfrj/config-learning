@@ -4,8 +4,9 @@ spring:
       discovery:
         enabled: true
         service-id: cloud-config-serivce-eureka
+      profile: dev
   application:
-    name: foobar
+    name: foo
     
     
 eureka:
